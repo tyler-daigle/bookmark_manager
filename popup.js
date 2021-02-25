@@ -6,6 +6,11 @@ document
     });
   });
 
+document
+  .querySelector("#details-button")
+  .addEventListener("click", function (e) {
+    window.open(chrome.runtime.getURL("./details.html"));
+  });
 // Traverse through the bookmarks tree. If the item has a children property it
 // will recursively call the function again.
 function showBookmarks(tree) {
